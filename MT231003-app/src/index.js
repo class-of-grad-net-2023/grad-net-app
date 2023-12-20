@@ -11,7 +11,7 @@ function pull_todos_elements( {todos = [] } )
     );
 }
 
-function display_todolist()
+export default function display_todolist()
 {
     const [todos] = useState(todolist);
     return <pull_todos_elements todos={todos} />;
