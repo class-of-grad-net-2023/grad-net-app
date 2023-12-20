@@ -6,8 +6,15 @@ import ToDoList from "./components/ToDoList.js";
 
 export default function Display_todolist()
 {
-    const [todos] = useState(todolist);
-    return <ToDoList todos={todos} />;
+    const [todos, current_todos] = useState(todolist);
+    return (
+        <ToDoList
+            todos={todos}
+            onRemoveTodo={id => {
+                const newToDoList = todos.filter(todo => todo.id !== id);
+                current_todos(newToDoList);
+            }}/>
+    );
 }
 
 
