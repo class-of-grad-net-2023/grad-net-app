@@ -4,5 +4,7 @@ import  AlbumsList from "./Albums/AlbumsList.js"
 
 export default function App() {
     const [albums]=useState(albumsData);
-    return <AlbumsList albums={albums}/>;
+    return (
+    <AlbumsList albums={albums}/>
+    );
 }

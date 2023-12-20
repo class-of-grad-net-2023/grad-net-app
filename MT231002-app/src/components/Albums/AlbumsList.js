@@ -1,13 +1,13 @@
-import React from "react";
-import Albums from "./Albums";
+import React, { useId } from "react";
+import Albums from "./Albums.js";
 
 export default function AlbumsList({albums=[]}){
     if(!albums.length) return <div>No Albums Listed.</div>
     return(
         <div>
             {
-                Albums.map(albums=><Albums key={id} {...albums}/>)
+                albums.map(albums=><Albums key={albums.id} {...albums}/>)
             }
         </div>
-    )
+    );
 }
