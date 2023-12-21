@@ -4,7 +4,6 @@ import Format_todo from "./Format_todo_item.js";
 export default function ToDolist( {todos = [], page, onRemoveTodo = f => f , onNextPage = () => f, onPreviousPage = () => f} )
 {
     const page_amount = 10;
-    console.log(todos.length/10);
     if(!todos.length) return <div>There is nothing to do now.</div>;
     return (
         <div>

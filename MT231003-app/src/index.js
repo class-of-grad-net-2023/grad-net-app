@@ -8,7 +8,6 @@ export default function Display_todolist()
 {
     const [todos, setTodos] = useState(todolist);
     const [page, setPage] = useState(0);
-    console.log(page);
     return (
         <ToDoList
             todos={todos}
