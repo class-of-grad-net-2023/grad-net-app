@@ -3,7 +3,8 @@ import { FaTrash } from "react-icons/fa";
 
 export default function Format_todo({ id, userId, title, completed, onRemove = f => f })
 {
-    const done = completed ? "〇" : "✕";
+    const done = completed ? "○" : "✕";
+    const number = id.toString().padStart(3, '0');
     return (
         <>
             <p>
@@ -11,7 +12,7 @@ export default function Format_todo({ id, userId, title, completed, onRemove = f
                     <FaTrash />
                 </button>
                 &emsp;
-                userID : { userId },  done?? : { done }, title : { title }
+                No.{ number } - userID : { userId },  done??? : { done },  title : { title }
             </p>
         </>
     );
