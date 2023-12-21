@@ -1,16 +1,25 @@
 import React, { useState } from "react";
 import Format_todo from "./Format_todo_item.js";
 
-export default function ToDolist( {todos = [], page, onRemoveTodo = f => f , onNextPage = () => f, onPreviousPage = () => f} )
+export default function ToDolist( {todos = [], page, onRemoveTodo = f => f , onChangeCompleted = f => f, onNextPage = () => f, onPreviousPage = () => f} )
 {
     const page_amount = 10;
+    console.log(todos.length);
     if(!todos.length) return <div>There is nothing to do now.</div>;
     return (
         <div>
             <h1>ToDoList</h1>
             {
-                todos.map(todo => <Format_todo key={todo.id} {...todo} onRemove={onRemoveTodo} />).slice(page*page_amount, page*page_amount+page_amount)
+                todos.map(todo => 
+                            <Format_todo 
+                                key={todo.id}
+                                {...todo}
+                                onRemove={onRemoveTodo}
+                                onChangeCompleted={onChangeCompleted} 
+                            />
+                        ).slice(page*page_amount, page*page_amount+page_amount)
             }
+            <p>&ensp;{page+1} / {Math.ceil((todos.length/10))}&ensp;</p>
             {
                 todos.length/10 <= page+1 ? <div></div> : <button onClick={onNextPage}> next </button>
             }

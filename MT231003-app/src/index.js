@@ -16,6 +16,12 @@ export default function Display_todolist()
                 const newToDoList = todos.filter(todo => todo.id !== id);
                 setTodos(newToDoList);
             }}
+            onChangeCompleted={id => {
+                const index = todos.findIndex(todo => {return todo.id === id});
+                setTodos((todos) =>
+                    todos.map((todo) => (todo.id === id ? { userId: todo.userId, id: todo.id, title: todo.title, completed: todo.completed^1}: todo))
+                );
+            }}
             onNextPage={() => {
                 setPage(page + 1);
             }}
