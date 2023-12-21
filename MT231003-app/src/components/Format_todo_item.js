@@ -1,5 +1,6 @@
 import React from "react";
 import { FaTrash } from "react-icons/fa";
+import "../../style.module.css";
 
 export default function Format_todo({ id, userId, title, completed, onRemove = f => f , onChangeCompleted = f => f})
 {
@@ -8,7 +9,7 @@ export default function Format_todo({ id, userId, title, completed, onRemove = f
     const number = id.toString().padStart(3, '0');
     return (
         <>
-            <p>
+            <p className="ToDo">
                 <button onClick={() => onRemove(id)}>
                     <FaTrash />
                 </button>
@@ -17,7 +18,7 @@ export default function Format_todo({ id, userId, title, completed, onRemove = f
                 &emsp;
                 is done??? : <button onClick={() => onChangeCompleted(id)}>{ done }</button>
                 &emsp;
-                title : { completed ? <s>{format_title}</s> : format_title }
+                title : { completed ? <s style={{color: "red"}}>{format_title}</s> : format_title }
             </p>
             <hr style={{color: "#AFAEB3", width: "100%"}} />
         </>
