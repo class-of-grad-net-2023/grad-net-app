@@ -15,7 +15,7 @@ export default function Format_todo({ id, userId, title, completed, onRemove = f
                 &emsp;
                 No.{ number } - userID : { userId }
                 &emsp;
-                done??? : <button onClick={() => onChangeCompleted(id)}>{ done }</button>
+                is done??? : <button onClick={() => onChangeCompleted(id)}>{ done }</button>
                 &emsp;
                 title : { completed ? <s>{format_title}</s> : format_title }
             </p>
