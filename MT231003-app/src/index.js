@@ -20,6 +20,9 @@ export default function Display_todolist()
             onNextPage={() => {
                 setPage(page + 1);
             }}
+            onPreviousPage={() =>{
+                setPage(page - 1);
+            }}
             />
     );
 }
