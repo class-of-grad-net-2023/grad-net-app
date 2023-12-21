@@ -6,14 +6,23 @@ import ToDoList from "./components/ToDoList.js";
 
 export default function Display_todolist()
 {
-    const [todos, current_todos] = useState(todolist);
+    const [todos, setTodos] = useState(todolist);
+    const [page, setPage] = useState(0);
     return (
         <ToDoList
             todos={todos}
+            page={page}
             onRemoveTodo={id => {
                 const newToDoList = todos.filter(todo => todo.id !== id);
-                current_todos(newToDoList);
-            }}/>
+                setTodos(newToDoList);
+            }}
+            onNextPage={() => {
+                setPage(page + 1);
+            }}
+            onPreviousPage={() =>{
+                setPage(page - 1);
+            }}
+            />
     );
 }
 
