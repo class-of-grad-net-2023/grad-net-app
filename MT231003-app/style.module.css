@@ -1,5 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
 
+.Title {
+    font-family: 'Rubik Mono One', monospace;
+}
 .ToDo {
-    font-family: 'Zen Kurenaido', sans-serif;
+    font-family: 'Anonymous Pro', monospace;
+}
+
+.BackGround {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:azure;
 }

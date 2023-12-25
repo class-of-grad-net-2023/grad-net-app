@@ -1,13 +1,14 @@
 import React from "react";
 import Format_todo from "./Format_todo_item.js";
+import "../../style.module.css";
 
 export default function ToDolist( {todos = [], page, onRemoveTodo = f => f , onChangeCompleted = f => f, onNextPage = () => f, onPreviousPage = () => f} )
 {
     const page_amount = 10;
     if(!todos.length) return <div>There is nothing to do now.</div>;
     return (
-        <div>
-            <h1>ToDoList</h1>
+        <div className="BackGround">
+            <h1 className="Title">ToDoList</h1>
             {
                 todos.map(todo => 
                             <Format_todo 
