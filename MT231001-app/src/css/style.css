@@ -1,0 +1,38 @@
+/* header.js */
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  display: flex;
+  padding: 10px 15px;
+  background-color: #fafafaf8;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_logo{
+  color: #333;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.header_list{
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header_item_contact{
+  background-color: #2486d1;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 6px;
+}
