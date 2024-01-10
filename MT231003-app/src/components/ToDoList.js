@@ -14,7 +14,7 @@ export default function ToDolist({
     const page_amount = 10;
     if(!todos.length) return <div>There is nothing to do now.</div>;
     return (
-        <div style={{ backgroundColor: "white", padding: "10px" }}>
+        <div style={{ backgroundColor: "white", padding: "0px" }}>
             {
                 todos.map(todo => 
                             <Format_todo 
