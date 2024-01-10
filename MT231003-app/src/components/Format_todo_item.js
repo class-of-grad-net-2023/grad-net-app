@@ -15,17 +15,27 @@ export default function Format_todo({
     const number = id.toString().padStart(3, '0');
     return (
         <>
-            <p className="ToDo">
-                <button onClick={() => onRemove(id)}>
-                    <FaTrash />
-                </button>
-                &emsp;
-                No.{ number } - userID: { userId }
-                &emsp;
-                done???: <button onClick={() => onChangeCompleted(id)}>{ done }</button>
-                &emsp;
-                title: { completed ? <s style={{color: "red"}}>{title}</s> : title }
-            </p>
+            <table>
+                <tr>
+                    <td>
+                        <button onClick={() => onRemove(id)}>
+                            <FaTrash />
+                        </button>
+                        &nbsp;
+                        No.{ number } - userID: { userId }
+                    </td>
+                </tr>
+                <tr>
+                    <td style={{ padding: "2px 0px 2px 45px" }}>
+                        is done ???: <span style={{ fontFamily: "富士ポップ", color: "#745030", borderStyle: "dashed", borderColor: "#745030", borderWidth: "2" }} onClick={() => onChangeCompleted(id)}>&thinsp;{ done }&thinsp;</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style={{ padding: "2px 0px 2px 45px" }}>
+                        [title]: { completed ? <s style={{color: "red"}}>{title}</s> : title }
+                    </td>
+                </tr>
+            </table>
             <hr style={{color: "#AFAEB3", width: "100%"}} />
         </>
     );
