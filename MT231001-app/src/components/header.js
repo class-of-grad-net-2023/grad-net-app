@@ -4,7 +4,7 @@ import "../css/style.css";
 const Header = () => {
   return (
     <div className="header">
-      <h1 className="header_logo">TODO Application!</h1>
+      <h1 className="header_logo">TODO Application</h1>
       <nav className="header_nav">
         <ul className="header_list">
           <li className="header_item">
