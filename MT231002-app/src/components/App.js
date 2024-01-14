@@ -3,7 +3,7 @@ import albumsData from "../../data/albums.json"
 import  AlbumsList from "./Albums/AlbumsList.js"
 
 export default function App() {
-    const [albums,setAlbums]=useState(albumsData);
+    const [albums]=useState(albumsData);
     const [page, setPage]=useState(0);
     const [albums2, setAlbums2]=useState(albums.slice(page,10));
 
