@@ -9,16 +9,28 @@ export default function App() {
 
     //データ分割
     for(let i=page;i<10;i++){
-        albums2.push(albums[i]);
+        if(albums[i]!==null){
+            albums2.push(albums[i]);
+        }
     }
 
-    return (
-    <div>
-        <h1>{"アルバム"}</h1>
-        <AlbumsList albums={albums2}/>
-        <button className="before">前へ</button>
-        {" "}
-        <button className="after">次へ</button>
-    </div>
-    );
+    if(page<1){
+        return (
+        <div>
+            <h1>{"アルバム"}</h1>
+            <AlbumsList albums={albums2}/>
+            <button className="after">次へ</button>
+        </div>
+        );
+    }else{
+        return (
+            <div>
+                <h1>{"アルバム"}</h1>
+                <AlbumsList albums={albums2}/>
+                <button className="before">前へ</button>
+                {" "}
+                <button className="after">次へ</button>
+            </div>
+            );
+    }
 }
