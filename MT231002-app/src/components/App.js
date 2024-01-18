@@ -1,22 +1,20 @@
 import React, {useState} from "react";
 import albumsData from "../../data/albums.json"
 import  AlbumsList from "./Albums/AlbumsList.js"
-import Albums from "./Albums/Albums.js";
 
 export default function App() {
     const [albums,setAlbums]=useState(albumsData);
     const [page, setPage]=useState(0);
     const [albums2, setAlbums2]=useState(albums.slice(page,10));
 
-    
     const forwardPage=()=>{
         setPage(page+10);
-        setAlbums2(albums.slice(page,10));
+        setAlbums2(...albums.slice(page,10));
     }
     
     const backPage=()=>{
         setPage(page-10);
-        setAlbums2(albums.slice(page,10));
+        setAlbums2(...albums.slice(page,10));
     }
     
 
