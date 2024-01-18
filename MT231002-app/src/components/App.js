@@ -9,12 +9,12 @@ export default function App() {
 
     const forwardPage=()=>{
         setPage(page+10);
-        setAlbums2(...albums.slice(page,10));
+        setAlbums2(albums.slice(page,10));
     }
     
     const backPage=()=>{
         setPage(page-10);
-        setAlbums2(...albums.slice(page,10));
+        setAlbums2(albums.slice(page,10));
     }
     
 
