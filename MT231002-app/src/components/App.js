@@ -13,6 +13,7 @@ export default function App() {
         setAlbums(newAlbums);
     }
     
+    //
     const backPage=()=>{
         const new_page=page-10;
         setPage(new_page);
