@@ -6,7 +6,6 @@ export default function App() {
     const [page,setPage]=useState(0);
     const [albums,setAlbums]=useState(albumsData.slice(page,page+10));
 
-    //次ページ
     const forwardPage=()=>{
         const new_page=page+10;
         setPage(new_page);
@@ -14,7 +13,6 @@ export default function App() {
         setAlbums(newAlbums);
     }
     
-    //前ページ
     const backPage=()=>{
         const new_page=page-10;
         setPage(new_page);
