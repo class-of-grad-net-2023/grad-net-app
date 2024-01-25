@@ -1,0 +1,19 @@
+  /* main.js */
+  .main-content-warpper{
+    display: flex;
+  }
+  
+  .title{
+      color: #000000;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  
+  .list-container{
+    align-items: center;
+      background-color: #ff00003b;
+      color: #000000;
+      padding: 5px;
+      margin-bottom: 0.3rem;
+      border-radius: 10px;
+  }
