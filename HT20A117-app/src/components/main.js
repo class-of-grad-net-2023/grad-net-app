@@ -12,6 +12,11 @@ const Main = () => {
   
   const AlbumItems = AlbumArray.slice(1, 10);
 
+  const Delete = id => {
+    const New = AlbumArray.filter((item) => item.id !== id);
+    setAlbum(New);
+  }
+
   return (
     <div>
       <div className="main-content-warpper">
@@ -21,6 +26,10 @@ const Main = () => {
             <li key={index}>
               <ul className="list-container">
                 <li>UserId: {album.userId},ID: {album.id},Title: {album.title}
+                <button className="delete-button"
+                      onClick={() => Delete(album.id)}>
+                      削除
+                    </button>
                 </li>
               </ul>
             </li>
