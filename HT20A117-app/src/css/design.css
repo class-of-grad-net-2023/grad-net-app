@@ -1,5 +1,5 @@
   /* main.js */
-  .main-content-warpper{
+  .main{
     display: flex;
   }
   
@@ -9,7 +9,7 @@
     font-size: 30px;
   }
   
-  .list-container{
+  .album{
     align-items: center;
       background-color: #ff00003b;
       color: #000000;
@@ -27,4 +27,22 @@
     padding: 5px 10px;
     font-size: 18px;
     text-align: center;
+  }
+
+  .Next{
+    display: flex;
+    justify-content: center;
+}
+
+  .Next-button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    border: 2px solid #27acd9;
+    background: #27acd9;
+    color: #fff;
+    transition: 0.5s;
   }
