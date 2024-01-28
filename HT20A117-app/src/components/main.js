@@ -15,7 +15,6 @@ const Main = () => {
   const number = 10;
   const Last = Page * 10;
   const First = Last - 10;
-  const AlbumItems = AlbumArray.slice(First, Last);
 
 
   const Delete = id => {
@@ -25,20 +24,22 @@ const Main = () => {
 
   const Next = (Nextpage) => NewPage(Nextpage);
 
+
   return (
     <div>
       <div className="main">
           <div className="title">Album</div>
         <ul>
-          {AlbumItems.map((album, index) => (
+          {AlbumArray.slice(First, Last).map((album, index) => (
             <li key={index}>
               <ul className="album">
-                <li>UserId: {album.userId},ID: {album.id},Title: {album.title}
+                <p>UserId: {album.userId}</p>
+                <p>ID: {album.id},Title: {album.title}
                 <button className="delete-button"
                       onClick={() => Delete(album.id)}>
                       削除
                     </button>
-                </li>
+                </p>
               </ul>
             </li>
           ))}
