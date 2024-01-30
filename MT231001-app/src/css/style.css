@@ -1,0 +1,116 @@
+/* index.html*/
+body {
+  background-color: #212121;
+}
+
+/* header.js */
+ul {
+  list-style-type: none;
+	padding-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  display: flex;
+  padding: 10px 15px;
+  background-color: #fffffff0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_logo{
+  color:  #212121;
+  padding-left: 5px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.header_list{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header_item{
+  background-color: inherit;
+  color: inherit;
+  padding: 5px 15px;
+  border-radius: 6px;
+}
+
+.header_item:hover{
+  background-color: #212121;
+  color: #ffffff;
+}
+
+.header_item_contact{
+  background-color: #27acd9;
+  color: #ffffff;
+  padding: 5px 15px;
+  border-radius: 6px;
+}
+
+/* pagination.js */
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+
+.page-link {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	margin: auto;
+	padding: 1rem 2rem;
+	font-weight: bold;
+	border: 2px solid #27acd9;
+	background: #27acd9;
+	color: #fff;
+	transition: 0.5s;
+}
+
+.page-link:hover {
+	color: #27acd9;
+	background: #fff;
+}
+
+/* app.js */
+.top-bar{
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  gap: 30px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.list-container{
+	background-color: #ffffff15;
+	color: #fff;
+	padding: 5px;
+	margin-bottom: 5px;
+	border-radius: 10px;
+}
+
+.delete-button{
+  background-color: #27acd9;
+  color: #fff;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.delete-button:hover{
+  background-color: #ff0000d0;
+  color: #fff;
+}
