@@ -1,0 +1,48 @@
+
+  .main{
+    display: flex;
+  }
+  
+  .title{
+    color: #000000;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  
+  .album{
+    align-items: center;
+    background-color: #ff00003b;
+    color: #000000;
+    padding: 3px;
+    margin-bottom: 0.3rem;
+    border-radius: 10px;
+}
+
+  .delete-button{
+    background-color: #000000;
+    color: #fff;
+    margin: 7px;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .Next{
+    display: flex;
+    justify-content: center;
+}
+
+  .Next-button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    border: 2px solid #000000;
+    background: #6307ed;
+    color: #fff;
+    transition: 0.1s;
+  }
